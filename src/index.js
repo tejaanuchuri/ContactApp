@@ -7,12 +7,11 @@ const people = [
   { name : 'jnani' }
 ]
 
-const element = React.createElement('ol',{className:'welcome message'},
- people.map((person) => (
-   React.createElement('li',{ key:person.name },person.name)
- ))
-)
-
+const element = <ol>
+   {people.map((person) => (
+     <li key={person.name}>{person.name}</li>
+   ))}
+</ol>
 console.log(element)
 
 ReactDOM.render(element,document.getElementById('root'))
