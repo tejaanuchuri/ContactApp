@@ -19,18 +19,7 @@ const contacts = [
    "handle": "tylermcginnis",
    "avatarURL": "http://localhost:5001/tyler.jpg"
  }
-];
-class ContactList extends Component {
-  render() {
-    const people = this.props.contacts
-
-    return <ol>
-      {people.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ol>
-  }
-}
+]
 
 class App extends Component {
   render(){
