@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const people = [
+  { name : 'teja'},
+  { name : 'suresh'},
+  { name : 'jnani' }
+]
+
 const element = React.createElement('ol',{className:'welcome message'},
- React.createElement('li',null,'Teja'),
- React.createElement('li',null,'suresh'),
- React.createElement('li',null,'jnani')
+ people.map((person) => (
+   React.createElement('li',{ key:person.name },person.name)
+ ))
 )
 
 console.log(element)
