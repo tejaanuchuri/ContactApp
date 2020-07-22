@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const element = React.createElement('div',{class:'welcome message'},'hello world')
+const element = React.createElement('div',{className:'welcome message'},'hello world')
 
 console.log(element)
 
