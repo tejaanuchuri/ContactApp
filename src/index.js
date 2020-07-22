@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-const people = [
-  { name : 'teja'},
-  { name : 'suresh'},
-  { name : 'jnani' }
-]
+class ContactList extends Component {
+  render() {
+    const people = [
+      { name : 'teja'},
+      { name : 'suresh'},
+      { name : 'jnani' }
+    ]
 
-const element = <ol>
-   {people.map((person) => (
-     <li key={person.name}>{person.name}</li>
-   ))}
-</ol>
-console.log(element)
+    return <ol>
+      {people.map((person) => (
+        <li key={person.name}>{person.name}</li>
+      ))}
+    </ol>
+  }
+}
+console.log(ContactList)
 
-ReactDOM.render(element,document.getElementById('root'))
+ReactDOM.render(<ContactList />,document.getElementById('root'))
